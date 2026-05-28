@@ -506,7 +506,7 @@ input, select, textarea { font-family: 'Rubik', sans-serif; color: var(--text); 
 window.__firebaseReady = false;
 window.signInWithGoogle = function() {
   var err = document.getElementById('loginError');
-  if (err) { err.style.display = ''; err.innerHTML = '⚠️ Firebase לא נטען. בדוק ב-DevTools (F12 → Console).<br><span style="font-size:11px;color:var(--text2);">סיבות: firebaseConfig לא הוחלף, domain לא מורשה, או בעיית רשת.</span>'; }
+  if (err) { err.style.display = ''; err.innerHTML = '⚠️ Firebase לא נטען. בדוק ב-DevTools (F12 → Console).<br><span style="font-size:11px;color:var(--text2);">סיבות:  לא הוחלף, domain לא מורשה, או בעיית רשת.</span>'; }
 };
 window.signOutUser = window.signOutUser || function(){};
 window.createHousehold = window.createHousehold || function(){};
@@ -517,7 +517,7 @@ setTimeout(function() {
     if (s) s.innerHTML = '<span style="color:var(--red);">❌ Firebase לא נטען (timeout)</span>';
     var err = document.getElementById('loginError');
     if (err && err.style.display === 'none') {
-      err.style.display = ''; err.innerHTML = '⚠️ Firebase לא הצליח להיטען.<br><span style="font-size:11px;color:var(--text2);">פתח Console (F12) וחפש שגיאות. בדוק: 1) firebaseConfig הוחלף? 2) חיבור אינטרנט? 3) domain מורשה?</span>';
+      err.style.display = ''; err.innerHTML = '⚠️ Firebase לא הצליח להיטען.<br><span style="font-size:11px;color:var(--text2);">פתח Console (F12) וחפש שגיאות. בדוק: 1)  הוחלף? 2) חיבור אינטרנט? 3) domain מורשה?</span>';
     }
   }
 }, 8000);
@@ -527,14 +527,23 @@ setTimeout(function() {
 <script type="module">
 // ===== CONFIG =====
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBhEbLhtuwvNNt8yRF9U7yraaDU05fJwC0",
+  authDomain: "wedo-e7cec.firebaseapp.com",
+  projectId: "wedo-e7cec",
+  storageBucket: "wedo-e7cec.firebasestorage.app",
+  messagingSenderId: "497751206647",
+  appId: "1:497751206647:web:14c57861c5c81c8e9881f2"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 if (firebaseConfig.apiKey === "YOUR_API_KEY" || firebaseConfig.projectId === "YOUR_PROJECT_ID") {
   const err = document.getElementById('loginError');
   const st = document.getElementById('firebaseStatus');
