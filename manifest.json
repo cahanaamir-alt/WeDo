@@ -1,0 +1,20 @@
+{
+  "name": "משימות הבית",
+  "short_name": "משימות",
+  "description": "אפליקציית משימות ביתיות משותפת למשפחה",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F8F6F1",
+  "theme_color": "#6366F1",
+  "dir": "rtl",
+  "lang": "he",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%236366F1'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white'>🏠</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
